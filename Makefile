@@ -28,6 +28,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-networking \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
 	$(CURDIR)/meta-openembedded/meta-python \
+	$(CURDIR)/meta-openembedded/meta-webserver \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
 	$(CURDIR)/meta-qt5 \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-airdigital \
@@ -218,6 +219,9 @@ MACHINEBUILD=force2nano
 else ifeq ($(MACHINEBUILD),force2plushv)
 MACHINE=dags73625
 MACHINEBUILD=force2plushv
+else ifeq ($(MACHINEBUILD),purehdse)
+MACHINE=dags73625
+MACHINEBUILD=purehdse
 else ifeq ($(MACHINEBUILD),force3uhdplus)
 MACHINE=dags7252
 MACHINEBUILD=force3uhdplus
@@ -236,6 +240,9 @@ MACHINEBUILD=galaxy4k
 else ifeq ($(MACHINEBUILD),tm4ksuper)
 MACHINE=dags7252
 MACHINEBUILD=tm4ksuper
+else ifeq ($(MACHINEBUILD),valalinux)
+MACHINE=dags7362
+MACHINEBUILD=valalinux
 
 
 else ifeq ($(MACHINEBUILD),classm)
@@ -451,6 +458,9 @@ MACHINEBUILD=mutant51
 else ifeq ($(MACHINEBUILD),ax51)
 MACHINE=hd51
 MACHINEBUILD=ax51
+else ifeq ($(MACHINEBUILD),axultra)
+MACHINE=hd51
+MACHINEBUILD=axultra
 else ifeq ($(MACHINEBUILD),bre2ze4k)
 MACHINE=hd51
 MACHINEBUILD=bre2ze4k
@@ -602,6 +612,9 @@ MACHINEBUILD=novatwin
 else ifeq ($(MACHINEBUILD),zgemmah3ac)
 MACHINE=h3
 MACHINEBUILD=zgemmah3ac
+else ifeq ($(MACHINEBUILD),zgemmah4)
+MACHINE=h4
+MACHINEBUILD=zgemmah4
 else ifeq ($(MACHINEBUILD),zgemmah5ac)
 MACHINE=h5
 MACHINEBUILD=zgemmah5ac
@@ -661,6 +674,9 @@ MACHINEBUILD=sf238
 else ifeq ($(MACHINEBUILD),twinboxlcdci5)
 MACHINE=7105s
 MACHINEBUILD=twinboxlcdci5
+else ifeq ($(MACHINEBUILD),bcm7252)
+MACHINE=8100s
+MACHINEBUILD=bcm7252
 
 
 else ifeq ($(MACHINEBUILD),mbtwinplus)
@@ -695,6 +711,12 @@ MACHINEBUILD=spycatminiplus
 else ifeq ($(MACHINEBUILD),spycat4kmini)
 MACHINE=xc7439
 MACHINEBUILD=spycat4kmini
+else ifeq ($(MACHINEBUILD),spycat4k)
+MACHINE=xc7439
+MACHINEBUILD=spycat4k
+else ifeq ($(MACHINEBUILD),spycat4kcombo)
+MACHINE=xc7439
+MACHINEBUILD=spycat4kcombo
 else ifeq ($(MACHINEBUILD),osmini)
 MACHINE=xc7362
 MACHINEBUILD=osmini
@@ -756,6 +778,9 @@ MACHINEBUILD=gbquadplus
 else ifeq ($(MACHINEBUILD),gbquad4k)
 MACHINE=gb7252
 MACHINEBUILD=gbquad4k
+else ifeq ($(MACHINEBUILD),gbue4k)
+MACHINE=gb7252
+MACHINEBUILD=gbue4k
 
 else ifeq ($(MACHINEBUILD),xpeedlxcs2)
 MACHINE=ultramini
