@@ -28,6 +28,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-networking \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
 	$(CURDIR)/meta-openembedded/meta-python \
+	$(CURDIR)/meta-openembedded/meta-webserver \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
 	$(CURDIR)/meta-qt5 \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-airdigital \
@@ -39,6 +40,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-dags \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-dream \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ebox \
+	$(CURDIR)/meta-oe-alliance/meta-brands/meta-edision \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-entwopia \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-formuler \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-fulan \
@@ -218,6 +220,9 @@ MACHINEBUILD=force2nano
 else ifeq ($(MACHINEBUILD),force2plushv)
 MACHINE=dags73625
 MACHINEBUILD=force2plushv
+else ifeq ($(MACHINEBUILD),purehdse)
+MACHINE=dags73625
+MACHINEBUILD=purehdse
 else ifeq ($(MACHINEBUILD),force3uhdplus)
 MACHINE=dags7252
 MACHINEBUILD=force3uhdplus
@@ -233,6 +238,19 @@ MACHINEBUILD=tmtwin4k
 else ifeq ($(MACHINEBUILD),galaxy4k)
 MACHINE=dags7252
 MACHINEBUILD=galaxy4k
+else ifeq ($(MACHINEBUILD),tm4ksuper)
+MACHINE=dags7252
+MACHINEBUILD=tm4ksuper
+else ifeq ($(MACHINEBUILD),valalinux)
+MACHINE=dags7362
+MACHINEBUILD=valalinux
+else ifeq ($(MACHINEBUILD),lunix34k)
+MACHINE=dags7252
+MACHINEBUILD=lunix34k
+else ifeq ($(MACHINEBUILD),lunix)
+MACHINE=dags73625
+MACHINEBUILD=lunix
+
 
 else ifeq ($(MACHINEBUILD),classm)
 MACHINE=odinm7
@@ -409,6 +427,15 @@ MACHINEBUILD=evomini
 else ifeq ($(MACHINEBUILD),evominiplus)
 MACHINE=ch625lc
 MACHINEBUILD=evominiplus
+else ifeq ($(MACHINEBUILD),vipert2c)
+MACHINE=yh625tc
+MACHINEBUILD=vipert2c
+else ifeq ($(MACHINEBUILD),vipercombo)
+MACHINE=yh625dt
+MACHINEBUILD=vipercombo
+else ifeq ($(MACHINEBUILD),vipercombohdd)
+MACHINE=ch625dt
+MACHINEBUILD=vipercombohdd
 
 
 else ifeq ($(MACHINEBUILD),mutant2400)
@@ -447,6 +474,9 @@ MACHINEBUILD=mutant51
 else ifeq ($(MACHINEBUILD),ax51)
 MACHINE=hd51
 MACHINEBUILD=ax51
+else ifeq ($(MACHINEBUILD),axultra)
+MACHINE=hd51
+MACHINEBUILD=axultra
 else ifeq ($(MACHINEBUILD),bre2ze4k)
 MACHINE=hd51
 MACHINEBUILD=bre2ze4k
@@ -522,9 +552,12 @@ MACHINEBUILD=dynaspark7162
 else ifeq ($(MACHINEBUILD),sf98)
 MACHINE=yh7362
 MACHINEBUILD=sf98
-else ifeq ($(MACHINEBUILD),evopanda)
+else ifeq ($(MACHINEBUILD),evoslimse)
 MACHINE=yh7362
-MACHINEBUILD=evopanda
+MACHINEBUILD=evoslimse
+else ifeq ($(MACHINEBUILD),evoslimt2c)
+MACHINE=yh62tc
+MACHINEBUILD=evoslimt2c
 else ifeq ($(MACHINEBUILD),t2cable)
 MACHINE=jj7362
 MACHINEBUILD=t2cable
@@ -598,6 +631,9 @@ MACHINEBUILD=novatwin
 else ifeq ($(MACHINEBUILD),zgemmah3ac)
 MACHINE=h3
 MACHINEBUILD=zgemmah3ac
+else ifeq ($(MACHINEBUILD),zgemmah4)
+MACHINE=h4
+MACHINEBUILD=zgemmah4
 else ifeq ($(MACHINEBUILD),zgemmah5ac)
 MACHINE=h5
 MACHINEBUILD=zgemmah5ac
@@ -610,6 +646,9 @@ MACHINEBUILD=zgemmah2splus
 else ifeq ($(MACHINEBUILD),zgemmah7)
 MACHINE=h7
 MACHINEBUILD=zgemmah7
+else ifeq ($(MACHINEBUILD),zgemmah6)
+MACHINE=h6
+MACHINEBUILD=zgemmah6
 
 
 else ifeq ($(MACHINEBUILD),mbmicro)
@@ -657,6 +696,9 @@ MACHINEBUILD=sf238
 else ifeq ($(MACHINEBUILD),twinboxlcdci5)
 MACHINE=7105s
 MACHINEBUILD=twinboxlcdci5
+else ifeq ($(MACHINEBUILD),bcm7252)
+MACHINE=8100s
+MACHINEBUILD=bcm7252
 
 
 else ifeq ($(MACHINEBUILD),mbtwinplus)
@@ -691,6 +733,12 @@ MACHINEBUILD=spycatminiplus
 else ifeq ($(MACHINEBUILD),spycat4kmini)
 MACHINE=xc7439
 MACHINEBUILD=spycat4kmini
+else ifeq ($(MACHINEBUILD),spycat4k)
+MACHINE=xc7439
+MACHINEBUILD=spycat4k
+else ifeq ($(MACHINEBUILD),spycat4kcombo)
+MACHINE=xc7439
+MACHINEBUILD=spycat4kcombo
 else ifeq ($(MACHINEBUILD),osmini)
 MACHINE=xc7362
 MACHINEBUILD=osmini
@@ -752,6 +800,9 @@ MACHINEBUILD=gbquadplus
 else ifeq ($(MACHINEBUILD),gbquad4k)
 MACHINE=gb7252
 MACHINEBUILD=gbquad4k
+else ifeq ($(MACHINEBUILD),gbue4k)
+MACHINE=gb7252
+MACHINEBUILD=gbue4k
 
 else ifeq ($(MACHINEBUILD),xpeedlxcs2)
 MACHINE=ultramini
@@ -765,6 +816,9 @@ MACHINEBUILD=et7x00mini
 else ifeq ($(MACHINEBUILD),gi11000)
 MACHINE=et1x000
 MACHINEBUILD=gi11000
+else ifeq ($(MACHINEBUILD),beyonwizu4)
+MACHINE=et13000
+MACHINEBUILD=beyonwizu4
 
 endif
 
