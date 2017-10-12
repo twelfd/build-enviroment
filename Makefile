@@ -40,6 +40,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-dags \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-dream \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ebox \
+	$(CURDIR)/meta-oe-alliance/meta-brands/meta-edision \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-entwopia \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-formuler \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-fulan \
@@ -243,6 +244,12 @@ MACHINEBUILD=tm4ksuper
 else ifeq ($(MACHINEBUILD),valalinux)
 MACHINE=dags7362
 MACHINEBUILD=valalinux
+else ifeq ($(MACHINEBUILD),lunix34k)
+MACHINE=dags7252
+MACHINEBUILD=lunix34k
+else ifeq ($(MACHINEBUILD),lunix)
+MACHINE=dags73625
+MACHINEBUILD=lunix
 
 
 else ifeq ($(MACHINEBUILD),classm)
@@ -420,6 +427,15 @@ MACHINEBUILD=evomini
 else ifeq ($(MACHINEBUILD),evominiplus)
 MACHINE=ch625lc
 MACHINEBUILD=evominiplus
+else ifeq ($(MACHINEBUILD),vipert2c)
+MACHINE=yh625tc
+MACHINEBUILD=vipert2c
+else ifeq ($(MACHINEBUILD),vipercombo)
+MACHINE=yh625dt
+MACHINEBUILD=vipercombo
+else ifeq ($(MACHINEBUILD),vipercombohdd)
+MACHINE=ch625dt
+MACHINEBUILD=vipercombohdd
 
 
 else ifeq ($(MACHINEBUILD),mutant2400)
@@ -536,9 +552,12 @@ MACHINEBUILD=dynaspark7162
 else ifeq ($(MACHINEBUILD),sf98)
 MACHINE=yh7362
 MACHINEBUILD=sf98
-else ifeq ($(MACHINEBUILD),evopanda)
+else ifeq ($(MACHINEBUILD),evoslimse)
 MACHINE=yh7362
-MACHINEBUILD=evopanda
+MACHINEBUILD=evoslimse
+else ifeq ($(MACHINEBUILD),evoslimt2c)
+MACHINE=yh62tc
+MACHINEBUILD=evoslimt2c
 else ifeq ($(MACHINEBUILD),t2cable)
 MACHINE=jj7362
 MACHINEBUILD=t2cable
@@ -627,6 +646,9 @@ MACHINEBUILD=zgemmah2splus
 else ifeq ($(MACHINEBUILD),zgemmah7)
 MACHINE=h7
 MACHINEBUILD=zgemmah7
+else ifeq ($(MACHINEBUILD),zgemmah6)
+MACHINE=h6
+MACHINEBUILD=zgemmah6
 
 
 else ifeq ($(MACHINEBUILD),mbmicro)
@@ -794,6 +816,9 @@ MACHINEBUILD=et7x00mini
 else ifeq ($(MACHINEBUILD),gi11000)
 MACHINE=et1x000
 MACHINEBUILD=gi11000
+else ifeq ($(MACHINEBUILD),beyonwizu4)
+MACHINE=et13000
+MACHINEBUILD=beyonwizu4
 
 endif
 
